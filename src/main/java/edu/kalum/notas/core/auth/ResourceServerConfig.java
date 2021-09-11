@@ -11,7 +11,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers(HttpMethod.GET,"/kalum-notas/v1/carrerasTecnicas").permitAll()
+        http.authorizeRequests().antMatchers(HttpMethod.GET,"/kalum-notas/v1/carreras","/kalum-notas/v1/alumnos").permitAll()
                 .anyRequest().authenticated();
     }
 }
