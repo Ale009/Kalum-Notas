@@ -56,7 +56,6 @@
             <version>1.0.10.RELEASE</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -73,5 +72,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

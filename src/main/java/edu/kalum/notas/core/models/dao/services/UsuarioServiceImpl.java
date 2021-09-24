@@ -29,6 +29,7 @@ public class UsuarioServiceImpl implements UserDetailsService {
        Usuario usuario = this.usuarioDao.findByUsername(username);
 
        if(usuario == null){
+           logger.info("No existe el usuario ".concat(username).concat(" valide sus credenciales"));
            throw new UsernameNotFoundException("No existe el usuario ".concat(username).concat(" valide sus credenciales"));
        }
        List<GrantedAuthority> authorities = usuario.getRoles()

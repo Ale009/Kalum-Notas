@@ -45,7 +45,7 @@ public class Usuario  implements Serializable {
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "usuario_role", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "role_id"),
-    uniqueConstraints = {@UniqueConstraint(columnNames = {"usuario_id","role_id"})})
-
+              uniqueConstraints = {@UniqueConstraint(columnNames = {"usuario_id","role_id"})})
+            
     private List<Role> roles;
 }

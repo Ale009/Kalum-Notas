@@ -24,6 +24,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/kalum-notas/v1")
+@CrossOrigin(origins = "*")
 public class CarreraTecnicaController {
 
     private Logger logger = LoggerFactory.getLogger(CarreraTecnicaController.class);
